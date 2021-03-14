@@ -1,0 +1,39 @@
+.cate_container{
+  display: flex;
+}
+.cate_list{
+  margin-bottom: 20px;
+}
+.cate_title{
+  font-size: 14px;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+.cate_info_container{
+  width: 100%;
+  margin-top: 20px;
+  padding: 10px;
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+.cate_info_container::after{
+  content: "";
+  width: 30%;
+}
+.cate_info{
+  width: 30%;
+  height: 105px;
+  display: flex;
+  flex-direction: column;
+}
+.cate_info image{
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 5px;
+}
+.cate_info text{
+  font-size: 12px;
+}

@@ -1,0 +1,12 @@
+{
+  "usingComponents": {
+    "van-search": "@vant/weapp/search/index",
+    "van-tab": "@vant/weapp/tab/index",
+    "van-tabs": "@vant/weapp/tabs/index",
+    "van-image": "@vant/weapp/image/index",
+    "van-sticky": "@vant/weapp/sticky/index",
+    "van-progress": "@vant/weapp/progress/index",
+    "goodsList": "/components/goodsList/goodsList",
+    "goTop": "/components/goTop/goTop"
+  }
+}

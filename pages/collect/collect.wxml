@@ -1,0 +1,33 @@
+<wxs src="/filters/format.wxs" module="format"/>
+
+<view class="goods_list">
+  <navigator class="goods_detail" wx:for="{{mockData}}" wx:key="*this"
+             url="{{'/pages/detail/detail?id='+item.id+'&pic='+item.pic+'&quan='+ item.quanJine+'&yuanjia='+item.yuanjia+'&jiage='+item.jiage+'&platform='+item.beforeTitleLables[0].img+'&xiaoliang='+item.xiaoliang+'&dtitle='+item.dtitle}}">
+    <image class="goods_img" src="{{item.pic}}"></image>
+    <view class="goods_container">
+      <view class="goods_name">
+        <image style="width: 23px;height:13px;" src="{{item.beforeTitleLables[0].img}}"></image>
+        <text>{{item.dtitle}}</text>
+      </view>
+      <view class="goods_price">
+        <text style="font-size:12px;color:#666;">券后</text>
+        <text style="font-size:12px;color:#ff2b22;">￥</text>
+        <text style="font-size:18px;color:#ff2b22;">{{item.jiage}}</text>
+      </view>
+      <view class="label">
+        <text class="labelOne" wx:if="{{item.labelOne}}">{{item.labelOne}}</text>
+        <text class="labelTwo" wx:if="{{item.labelTwo}}">{{item.labelTwo}}</text>
+        <view wx:if="quanJine">
+          <text class="ticket_border">券</text>
+          <text class="ticlet_value">{{item.quanJine}}元</text>
+        </view>
+      </view>
+      <view class="sales_num" wx:if="{{item.xiaoliang < 10000}}">
+        已售{{format.formatSales(item.xiaoliang,1)}}
+      </view>
+      <view class="sales_num" wx:else>
+        已售{{format.formatSales(item.xiaoliang,1)}}万
+      </view>
+    </view>
+  </navigator>
+</view>

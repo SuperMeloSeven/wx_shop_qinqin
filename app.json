@@ -1,0 +1,65 @@
+{
+  "pages":[
+    "pages/home/home",
+    "pages/category/category",
+    "pages/collect/collect",
+    "pages/mine/mine",
+    "pages/detail/detail",
+    "pages/setting/setting",
+    "pages/login/login",
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "navigationBarBackgroundColor": "#bf0000",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "小猪商城",
+    "backgroundColor": "#efefef",
+    "backgroundTextStyle": "dark",
+    "onReachBottomDistance": 50
+  },
+  "tabBar": {
+    "color": "#333",
+    "selectedColor": "#f66",
+    "backgroundColor": "#fff",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "/resources/iconfonts/home.png",
+        "selectedIconPath": "/resources/iconfonts/home_active.png"
+      },
+      {
+        "pagePath": "pages/category/category",
+        "text": "分类",
+        "iconPath": "/resources/iconfonts/modular.png",
+        "selectedIconPath": "/resources/iconfonts/modular_active.png"
+      },
+      {
+        "pagePath": "pages/collect/collect",
+        "text": "收藏",
+        "iconPath": "/resources/iconfonts/collection.png",
+        "selectedIconPath": "/resources/iconfonts/collection_active.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "/resources/iconfonts/user.png",
+        "selectedIconPath": "/resources/iconfonts/user_active.png"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 6000,
+    "connectSocket": 5000,
+    "uploadFile": 4000,
+    "downloadFile": 5000
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "小程序位置信息展示1111111"
+    }
+  },
+  "sitemapLocation": "sitemap.json"
+}

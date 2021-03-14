@@ -1,0 +1,18 @@
+var format = {
+  formatSales: function(sales,num){
+    if(sales < 10000) {
+      return sales
+    }else{
+      return (parseInt(sales)/10000).toFixed(num)
+    }
+  },
+  formatNow: function (d) {
+    console.log(d);
+    return getDate().getFullYear() + '.' + (getDate().getMonth()+1) + '.' + (getDate().getDate() + d)
+  }
+}
+
+module.exports = {
+  formatSales: format.formatSales,
+  formatNow: format.formatNow
+}

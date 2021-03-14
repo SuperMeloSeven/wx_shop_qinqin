@@ -1,0 +1,3 @@
+<view class="goTop">
+  <van-icon name="back-top" bind:click="goTop" size="40px" />
+</view>

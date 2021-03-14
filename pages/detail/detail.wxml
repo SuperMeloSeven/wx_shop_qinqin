@@ -1,0 +1,79 @@
+<wxs src="/filters/format.wxs" module="format"/>
+
+<view class="detail">
+  <swiper class="goods_swiper">
+    <swiper-item>
+      <image class="goods_img" src="{{pic}}"></image>
+    </swiper-item>
+  </swiper>
+  <view class="goods_activity">
+    <van-cell is-link value="活动火爆进行中!">
+      <view slot="title" class="goods_notice">
+        <image src="https://img.alicdn.com/imgextra/i4/2053469401/O1CN0179sqg32JJi1MfpuXv_!!2053469401.png"></image>
+        <text>全天销量排行</text>
+      </view>
+    </van-cell>
+    <view class="infomation">
+      <view class="info_top">
+        <view class="goods_price">
+          <text class="price_flag">￥ </text>
+          <text class="new_price">{{jiage}}</text>
+          <text class="old_price"> 原价￥{{yuanjia}}</text>
+        </view>
+        <view class="stock">
+          <text>已售</text>
+          <text class="stock_num">{{format.formatSales(xiaoliang,1)}}万</text>
+          <text>件</text>
+        </view>
+      </view>
+      <view class="info_mid">
+        <image src="{{platform}}"></image>
+        <text>{{dtitle}}</text>
+      </view>
+      <view class="info_bottom">
+        <view class="ticket_left">
+          <text class="price_flag">￥</text>
+          <text class="new_price">{{quan}}</text>
+          <view class="ticket_rules">
+            <text>优惠券使用权限 \n {{format.formatNow(0)}} - {{format.formatNow(7)}}</text>
+          </view>
+        </view>
+        <view class="ticket_right">
+          <text>立即领券</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="comment"></view>
+  <view class="brand"></view>
+  <view class="dropMenu"> 
+    <van-dropdown-menu>
+      <van-dropdown-item value="{{ dropValue }}" options="{{ goodsInfo }}" />
+    </van-dropdown-menu>
+  </view>
+  <view class="recommend">
+    <view class="recommend_title">
+      <van-icon name="like" color="#f14242" />
+      <text>为你推荐</text>
+    </view>
+    <goodsList renderList="{{recommendList}}" />
+  </view>
+  <goTop wx:if="{{showGoTop}}"/>
+  <view>
+    <van-goods-action>
+      <van-goods-action-icon icon="share-o" text="分享" bind:click="shareClick" />
+      <van-goods-action-icon icon="star-o" text="收藏" bind:click="collectClick({{id}})" />
+      <van-goods-action-button text="口令购买" color="#ff9173" bind:click="onClickButton" />
+      <van-goods-action-button text="￥{{jiage}} 领券购买" bind:click="onClickButton" />
+    </van-goods-action>
+  </view>
+  <view>
+    <van-share-sheet
+      show="{{ showShare }}"
+      title="立即分享给好友"
+      options="{{ options }}"
+      bind:select="shareSelect"
+      bind:close="shareClose"
+    />
+  </view>
+</view>

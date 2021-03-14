@@ -1,0 +1,47 @@
+<view class="mine">
+  <view class="mine_container">
+    <view class="user_info">
+      <view class="user_info_name">
+        <image src="https://cmsstatic.ffquan.cn//wap_new/user/images/integral/user.png?v=202101280915"></image>
+        <navigator class="user_login" url="{{'/pages/login/login'}}" wx:if="{{!token}}">登陆/注册</navigator>
+        <text class="user_login" wx:else>用户名</text>
+      </view>
+      <navigator url="{{'/pages/setting/setting'}}">
+        <image class="setting" src="https://cmsstatic.ffquan.cn//wap_new/user/images/icon/user_icon_set.svg?v=202101280915"></image>
+      </navigator>
+    </view>
+    <view class="user_main">
+      <view class="user_me">
+        <navigator class="mine_fun" url="{{'/pages/detail/detail'}}">
+          <image src="https://cmsstatic.ffquan.cn//wap_new/user/images/integral/love.png?v=202101280915"></image>
+          <text>我的收藏</text>
+        </navigator>
+        <navigator class="mine_fun" url="{{'/pages/detail/detail'}}">
+          <image src="https://cmsstatic.ffquan.cn//wap_new/user/images/integral/foot.png?v=202101280915"></image>
+          <text>我的足迹</text>
+        </navigator>
+      </view>
+      <view class="user_tools">
+        <view class="tools_title">常用工具</view>
+        <view class="tools_content">
+          <navigator class="tools_list" url="{{'/pages/detail/detail'}}">
+            <image src="https://cmsstatic.ffquan.cn//wap_new/user/images/integral/tools1.png?v=202101280915"></image>
+            <text>新手教程</text>
+          </navigator>
+          <navigator class="tools_list" url="{{'/pages/detail/detail'}}">
+            <image src="https://cmsstatic.ffquan.cn//wap_new/user/images/integral/tools2.png?v=202101280915"></image>
+            <text>专属客服</text>
+          </navigator>
+          <navigator class="tools_list" url="{{'/pages/detail/detail'}}">
+            <image src="https://cmsstatic.ffquan.cn//wap_new/user/images/integral/tools4.png?v=202101280915"></image>
+            <text>意见反馈</text>
+          </navigator>
+          <navigator class="tools_list" url="{{'/pages/detail/detail'}}">
+            <image src="https://cmsstatic.ffquan.cn//wap_new/user/images/integral/tools5.png?v=202101280915"></image>
+            <text>帮助中心</text>
+          </navigator>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

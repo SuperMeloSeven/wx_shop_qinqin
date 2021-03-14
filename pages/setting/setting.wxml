@@ -1,0 +1,34 @@
+<view class="setting">
+  <van-nav-bar style="margin-bottom: 10px">
+    <text class="set_title" slot="title">设置</text>
+  </van-nav-bar>
+  <view class="set_options">
+    <van-cell
+    is-link
+    title="个人信息"
+    link-type="navigateTo"
+    url="/pages/dashboard/index"
+    value="待完善"
+    />
+    <van-cell
+    is-link
+    title="账户安全"
+    link-type="navigateTo"
+    url="/pages/dashboard/index"
+    value="未授权"
+    />
+  </view>
+  <view class="set_options">
+    <van-cell
+    is-link
+    title="意见反馈"
+    link-type="navigateTo"
+    url="/pages/dashboard/index"
+    />
+  </view>
+  <view class="set_options" wx:if="{{token}}">
+    <van-cell link-type="switchTab" url="/pages/mine/mine">
+      <view class="exit" slot="title">退出登陆</view>
+    </van-cell>
+  </view>
+</view>

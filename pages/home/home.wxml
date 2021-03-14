@@ -1,0 +1,186 @@
+<wxs src="/filters/format.wxs" module="format"/>
+
+<view class="header">
+  <van-search shape="round" background="#bf0000" use-action-slot placeholder="输入商品名或粘贴宝贝标题搜索" sticky>
+    <view slot="action" bind:tap="onClick" class="message">
+      <text class="iconfont icon-xiaoxi message_icon"></text>
+      <text>消息</text>
+    </view>
+  </van-search>
+  <van-tabs sticky title-inactive-color="#e9a6a6" title-active-color="#fff" color="#fff">
+    <van-tab title="精选">
+      <view class="container">
+        <view class="banner">
+          <swiper indicator-dots="{{true}}" autoplay="{{true}}" circular="{{true}}" interval="{{2000}}"
+            duration="{{500}}" indicator-active-color="#fff">
+            <swiper-item>
+              <van-image class="banner_image" width="100%" height="150" lazy-load
+                src="https://img.alicdn.com/imgextra/i1/2053469401/O1CN01oKK8D32JJi3C0Twb4_!!2053469401.jpg" />
+            </swiper-item>
+            <swiper-item>
+              <van-image class="banner_image" width="100%" height="150" lazy-load
+                src="https://img.alicdn.com/imgextra/i2/2053469401/O1CN01aXjO2H2JJi4Yyodnl_!!2053469401.jpg" />
+            </swiper-item>
+            <swiper-item>
+              <van-image class="banner_image" width="100%" height="150" lazy-load
+                src="https://img.alicdn.com/imgextra/i4/2053469401/O1CN01lVA9rs2JJi4XMtftT_!!2053469401.jpg" />
+            </swiper-item>
+          </swiper>
+        </view>
+        <view class="home_cate">
+          <ul class="cate_ul">
+            <li class="cate_li" wx:for="{{homeCate}}" wx:key="*this">
+              <image src="{{item.address}}"></image>
+              <text>{{item.name}}</text>
+            </li>
+          </ul>
+        </view>
+        <view class="notice">
+          <view class="notice_left">
+            <image src="https://img.alicdn.com/imgextra/i3/2053469401/O1CN011wdOkj2JJhy7TkPFo_!!2053469401.png"></image>
+          </view>
+          <view class="notice_right">
+            <swiper class="notice_list" autoplay="{{true}}" circular="{{true}}" vertical="{{true}}" interval="{{2000}}" duration="{{500}}">
+              <swiper-item class="notice_item" wx:for="{{noticeList}}" wx:key="*this">
+                <text class="notice_flag">{{item.flag}}</text>
+                <text class="notice_text">{{item.text}}</text>
+                <text class="notice_arrow">></text>
+              </swiper-item>
+            </swiper>
+          </view>
+        </view>
+        <view class="recommend">
+          <image class="re_top"
+            src="https://img.alicdn.com/imgextra/i2/2053469401/O1CN01rdFGJ82JJi4WKOoCK_!!2053469401.gif?v=202010" />
+          <view class="re_center">
+            <image src="https://img.alicdn.com/imgextra/i2/2053469401/O1CN01i5IOfb2JJi4Swja3V_!!2053469401.png"
+              style="margin-left: 10px"></image>
+            <image src="https://img.alicdn.com/imgextra/i4/2053469401/O1CN01Kt4unI2JJi4Z9pnpG_!!2053469401.png"
+              style="margin-right: 10px"></image>
+          </view>
+          <view class="re_bottom">
+            <image src="https://img.alicdn.com/imgextra/i2/2053469401/O1CN01nFIdhk2JJi3G5r6ly_!!2053469401.png"></image>
+            <image src="https://img.alicdn.com/imgextra/i2/2053469401/O1CN01AhgjnW2JJi3HHV8CJ_!!2053469401.png"></image>
+            <image src="https://img.alicdn.com/imgextra/i2/2053469401/O1CN01SLGOPI2JJi3ENVhLG_!!2053469401.png"></image>
+            <image src="https://img.alicdn.com/imgextra/i4/2053469401/O1CN01MpyIV52JJi3LrAoms_!!2053469401.png"></image>
+          </view>
+        </view>
+        <view class="brand">
+          <view class="brand_top">
+            <view class="brand_title">
+              <text>品牌特卖</text>
+              <text class="latest_goods">今日上新38款</text>
+            </view>
+            <view class="brand_sale">
+              <swiper class="brand_message" autoplay="{{true}}" circular="{{true}}" vertical="{{true}}"
+                interval="{{3500}}" duration="{{500}}">
+                <swiper-item class="brand_item" wx:for="{{brandSale}}" wx:key="*this">
+                  <text class="brand_message_text">{{item.message}}></text>
+                </swiper-item>
+              </swiper>
+            </view>
+          </view>
+          <view class="brand_list">
+            <swiper indicator-dots="{{true}}" circular="{{true}}"
+            duration="{{500}}" indicator-active-color="#bf0000">
+              <swiper-item class="brand_info" wx:for="{{brandList}}" wx:key='*this'>
+                <view class="brand_name">
+                  <view class="brand_logo">
+                    <image src="{{item.img}}"></image>
+                    <text>{{item.title}}</text>
+                  </view>
+                  <view>{{item.description}}</view>
+                  <view>{{item.sales}}  ></view>
+                </view>
+                <view class="brand_detail">
+                  <view class="brand_detail_li" wx:for="{{item.detail}}" wx:key="*this" wx:for-item="v">
+                    <image src="{{v.address}}"></image>
+                    <view>
+                      <text class="ticket_border">券</text>
+                      <text class="ticlet_value">{{v.ticket}}</text>
+                    </view>
+                    <view>
+                      <text class="goods_price">￥ {{v.price}}</text>
+                      <text class="old_price">￥{{v.oldPrice}}</text>
+                    </view>
+                  </view>
+                </view>
+              </swiper-item>
+            </swiper>
+          </view>
+        </view>
+        <view class="weGet">
+          <view class="weGet_top">
+            <text class="title">大家都在领</text>
+            <view class="weGet_num">
+              <text style="color: #ff5151;">174,424</text>
+              <text style="font-size: 13px;">今日实时领券</text>
+            </view>
+          </view>
+          <swiper class="weGet_swiper" autoplay="{{true}}" circular="{{true}}" vertical="{{true}}" 
+                  interval="{{5000}}">
+            <swiper-item  wx:for="{{weGetList}}" wx:key="*this">
+              <image src="{{item.userImg}}"/>
+              <text>{{item.userPhone}}刚刚领取了优惠券：{{item.dtitle}}</text>
+            </swiper-item>
+          </swiper>
+          <view class="weGet_list">
+            <view class="weGet_list_item" wx:for="{{weGetList}}" wx:key="*this">
+              <image src="{{item.pic}}"/>
+              <view class="ticket_after">
+                <text style="font-size: 12px;color: #666;">券后价:</text>
+                <text class="goods_price">￥{{item.price}}</text>
+              </view>
+              <van-progress pivot-text="已领取{{format.formatSales(item.couponOver,1)}}万张" color="#ee0a24" 
+                            percentage="50" stroke-width="15px"/>
+              <text style="font-size: 12px;">火速领券中</text>
+            </view>
+          </view>
+        </view>
+        <!-- <view class="goods_list">
+          <view class="goods_detail" wx:for="{{goodsList}}" wx:key="*this">
+            <image class="goods_img" src="{{item.pic}}"></image>
+            <view class="goods_container">
+              <view class="goods_name">
+                <image style="width: 23px;height:13px;" src="{{item.beforeTitleLables[0].img}}"></image>
+                <text>{{item.dtitle}}</text>
+              </view>
+              <view class="goods_price">
+                <text style="font-size:12px;color:#666;">券后</text>
+                <text style="font-size:12px;color:#ff2b22;">￥</text>
+                <text style="font-size:18px;color:#ff2b22;">{{item.jiage}}</text>
+              </view>
+              <view class="label">
+                <text class="labelOne" wx:if="{{item.labelOne}}">{{item.labelOne}}</text>
+                <text class="labelTwo" wx:if="{{item.labelTwo}}">{{item.labelTwo}}</text>
+                <view wx:if="quanJine">
+                  <text class="ticket_border">券</text>
+                  <text class="ticlet_value">{{item.quanJine}}元</text>
+                </view>
+              </view>
+              <view class="sales_num">
+                已售{{format.formatSales(item.xiaoliang,1)}}万
+              </view>
+            </view>
+          </view>
+        </view> -->
+        <goodsList renderList="{{goodsList}}" />
+        <goTop wx:if="{{showGoTop}}"/>
+      </view>
+    </van-tab>
+    <van-tab title="美食">内容 2</van-tab>
+    <van-tab title="鞋品">内容 3</van-tab>
+    <van-tab title="女装">内容 4</van-tab>
+    <van-tab title="美妆">内容 5</van-tab>
+    <van-tab title="男装">内容 6</van-tab>
+    <van-tab title="数码家电">内容 4</van-tab>
+    <van-tab title="居家日用">内容 5</van-tab>
+    <van-tab title="内衣">内容 6</van-tab>
+    <van-tab title="母婴">内容 6</van-tab>
+    <van-tab title="家装家纺">内容 6</van-tab>
+    <van-tab title="文娱车品">内容 6</van-tab>
+    <van-tab title="配饰">内容 6</van-tab>
+    <van-tab title="箱包">内容 6</van-tab>
+    <van-tab title="户外运动">内容 6</van-tab>
+  </van-tabs>
+</view>

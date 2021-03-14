@@ -1,0 +1,213 @@
+{
+  "data": [{
+    "name": "疯抢排行",
+    "width": "",
+    "height": "",
+    "choose": {
+      "obj": {
+        "title": "",
+        "px": "1",
+        "pxType": "1",
+        "blackId": "0"
+      },
+      "choose_1": "0",
+      "choose_2": "3"
+    },
+    "address": "https://img.alicdn.com/imgextra/i3/2053469401/O1CN01ra4ZvS2JJi4dQgAAZ_!!2053469401.gif",
+    "chooseTitle": "",
+    "chooseSortBy": "1",
+    "chooseBlackListId": "0",
+    "style": "",
+    "styleId": "",
+    "jumpUrl": "?r=activity/sc#/fengqianglist"
+  }, {
+    "name": "9.9包邮",
+    "width": "",
+    "height": "",
+    "choose": {
+      "obj": {
+        "title": "",
+        "px": "1",
+        "pxType": "1",
+        "blackId": "0"
+      },
+      "choose_1": "0",
+      "choose_2": "4"
+    },
+    "address": "https://img.alicdn.com/imgextra/i2/2053469401/O1CN01vuk7s12JJi4dQhq7N_!!2053469401.gif",
+    "chooseTitle": "",
+    "chooseSortBy": "1",
+    "chooseBlackListId": "0",
+    "style": "",
+    "styleId": "",
+    "jumpUrl": "?r=activity/sc#/ninePackageMail"
+  }, {
+    "name": "品牌特卖",
+    "width": "",
+    "height": "",
+    "choose": {
+      "obj": {
+        "title": "",
+        "px": "1",
+        "pxType": "1",
+        "blackId": "0"
+      },
+      "choose_1": "0",
+      "choose_2": "20"
+    },
+    "address": "https://img.alicdn.com/imgextra/i4/2053469401/O1CN016cqn3z2JJi4VTlXlP_!!2053469401.png",
+    "chooseTitle": "",
+    "chooseSortBy": "1",
+    "chooseBlackListId": "0",
+    "style": "",
+    "styleId": "",
+    "jumpUrl": "?r=index/brand"
+  }, {
+    "name": "每日半价",
+    "width": "",
+    "height": "",
+    "choose": {
+      "obj": {
+        "title": "",
+        "px": "1",
+        "pxType": "1",
+        "blackId": "0"
+      },
+      "choose_1": "0",
+      "choose_2": "5"
+    },
+    "address": "https://img.alicdn.com/imgextra/i1/2053469401/O1CN01sJwBd12JJi4XH8Btf_!!2053469401.png",
+    "chooseTitle": "",
+    "chooseSortBy": "1",
+    "chooseBlackListId": "0",
+    "style": "",
+    "styleId": "",
+    "jumpUrl": "?r=every/e"
+  }, {
+    "name": "折上折",
+    "width": "",
+    "height": "",
+    "choose": {
+      "obj": {
+        "title": "",
+        "px": "1",
+        "pxType": "1",
+        "blackId": "0"
+      },
+      "choose_1": "0",
+      "choose_2": "9"
+    },
+    "address": "https://img.alicdn.com/imgextra/i1/2053469401/O1CN01j4geG52JJi4dwqfFG_!!2053469401.gif",
+    "chooseTitle": "",
+    "chooseSortBy": "1",
+    "chooseBlackListId": "0",
+    "style": "",
+    "styleId": "",
+    "jumpUrl": "?r=activity/sc#/double/discount"
+  }, {
+    "name": "今日秒杀",
+    "width": "",
+    "height": "",
+    "choose": {
+      "obj": {
+        "title": "",
+        "px": "1",
+        "pxType": "1",
+        "blackId": "0"
+      },
+      "choose_1": "5",
+      "choose_2": "https://mo.m.taobao.com/optimus/flms-toc?pid=#pid#&id=20200410154626"
+    },
+    "address": "https://img.alicdn.com/imgextra/i1/2053469401/O1CN01X2Qzix2JJi4Tbkh8L_!!2053469401.png",
+    "chooseTitle": "",
+    "chooseSortBy": "1",
+    "chooseBlackListId": "0",
+    "style": "",
+    "styleId": "",
+    "jumpUrl": "https://mo.m.taobao.com/optimus/flms-toc?pid=mm_115133272_39310627_147296368&id=20200410154626"
+  }, {
+    "name": "饿了么",
+    "width": "",
+    "height": "",
+    "choose": {
+      "obj": {
+        "title": "",
+        "px": "1",
+        "pxType": "1",
+        "blackId": "0"
+      },
+      "choose_1": "5",
+      "choose_2": "#pid20150318019998877pid#&id=20200424134851"
+    },
+    "address": "https://img.alicdn.com/imgextra/i4/2053469401/O1CN01ZOaePm2JJi4aX10nb_!!2053469401.gif",
+    "chooseTitle": "",
+    "chooseSortBy": "1",
+    "chooseBlackListId": "0",
+    "style": "",
+    "styleId": "",
+    "jumpUrl": "https://s.click.ele.me/t?union_lens=lensId%3AMAPI%401613036991%400b14f9e2_9a48_177907f330e_0862%4001%3BeventPageId%3A20150318019998877&&e=-s02ancxPZsMYP3qjiLWDA0eCIkgcRRPId9alI7MDUyYIaasWnR7r7WpIBV1L652SUYtjfVyI1vsDH7KHo6gKrlnrqszd0Ljszl1Ib7pMlVuNb6nOrLCNyKnkG15jqyD28Cu6EzUxkwRBhi5Eh3r7BmCWgwM79SzX72kuieN6Wcry5IehBqOt2UZJzwgdeOlP00U171znajFbDlvb5j4SeeW3ulffkObWXGUIC63AnvGgAD0MV9zdYDfyYRaFscwnI27ZjnjJR2kj5tp9EbarAIcq6c2Hh7l2saIx2gQFITSuZMc5q3cEaiTctBZIPZPpeesUdv2INeDyUg1URQ3S47MkF1agzswDiFF8k724Oq5479LRP8PORQmSkYjaIuWpwmSyP5kxznti2s9MBhp32apfhCQImMR6jWCz1WpYksR55RzL0U9VQVD7T4q6vW0VDZienICXmxziUqxGkrWUi8DQ5sJgAUYgTyWgNmz&"
+  }, {
+    "name": "辣妈专区",
+    "width": "",
+    "height": "",
+    "choose": {
+      "obj": {
+        "title": "",
+        "px": "1",
+        "pxType": "1",
+        "blackId": "0"
+      },
+      "choose_1": "0",
+      "choose_2": "30"
+    },
+    "address": "https://img.alicdn.com/imgextra/i2/2053469401/O1CN01VrWlJb2JJi4UsAlgP_!!2053469401.png",
+    "chooseTitle": "",
+    "chooseSortBy": "1",
+    "chooseBlackListId": "0",
+    "style": "",
+    "styleId": "",
+    "jumpUrl": "?r=activity/sc#/productSpa?id=1&cms_client=wap"
+  }, {
+    "name": "大额神券",
+    "width": "",
+    "height": "",
+    "choose": {
+      "obj": {
+        "title": "",
+        "px": "1",
+        "pxType": "1",
+        "blackId": "0"
+      },
+      "choose_1": "0",
+      "choose_2": "31"
+    },
+    "address": "https://img.alicdn.com/imgextra/i1/2053469401/O1CN01NbCe8C2JJi4dPCjA2_!!2053469401.png",
+    "chooseTitle": "",
+    "chooseSortBy": "1",
+    "chooseBlackListId": "0",
+    "style": "",
+    "styleId": "",
+    "jumpUrl": "?r=activity/sc#/productSpa?id=2&cms_client=wap"
+  }, {
+    "name": "限时爆品",
+    "width": "",
+    "height": "",
+    "choose": {
+      "obj": {
+        "title": "",
+        "px": "1",
+        "pxType": "1",
+        "blackId": "0"
+      },
+      "choose_1": "5",
+      "choose_2": "https://mo.m.taobao.com/union/juxianshiqiang2b_2C?pid=#pid#&id=20200304174618"
+    },
+    "address": "https://img.alicdn.com/imgextra/i1/2053469401/O1CN01XKXE952JJi4XHB8uW_!!2053469401.png",
+    "chooseTitle": "",
+    "chooseSortBy": "1",
+    "chooseBlackListId": "0",
+    "style": "",
+    "styleId": "",
+    "jumpUrl": "https://mo.m.taobao.com/union/juxianshiqiang2b_2C?pid=mm_115133272_39310627_147296368&id=20200304174618"
+  }]
+}
