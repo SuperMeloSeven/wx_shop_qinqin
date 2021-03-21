@@ -2,7 +2,7 @@
 
 <view class="goods_list">
   <navigator class="goods_detail" wx:for="{{renderList}}" wx:key="*this"
-             url="{{'/pages/detail/detail?id='+item.id+'&pic='+item.pic+'&quan='+ item.quanJine+'&yuanjia='+item.yuanjia+'&jiage='+item.jiage+'&platform='+item.beforeTitleLables[0].img+'&xiaoliang='+item.xiaoliang+'&dtitle='+item.dtitle}}">
+             url="{{'/pages/detail/detail?id='+item.id+'&pic='+item.pic+'&quan='+ item.quanJine+'&yuanjia='+item.yuanjia+'&jiage='+item.jiage+'&platform='+item.beforeTitleLables[0].img+'&xiaoliang='+item.xiaoliang+'&dtitle='+item.dtitle+'&dsrScore='+item.dsrScore+'&shipScore='+item.shipScore+'&serviceScore='+item.serviceScore+'&shopLogo='+item.shopLogo+'&shopName='+item.shopName}}">
     <image class="goods_img" src="{{item.pic}}"></image>
     <view class="goods_container">
       <view class="goods_name">

@@ -1,4 +1,5 @@
 var format = {
+  // 用于格式化销量
   formatSales: function(sales,num){
     if(sales < 10000) {
       return sales
@@ -6,12 +7,14 @@ var format = {
       return (parseInt(sales)/10000).toFixed(num)
     }
   },
+  // 用于格式化时间
   formatNow: function (d) {
     console.log(d);
     return getDate().getFullYear() + '.' + (getDate().getMonth()+1) + '.' + (getDate().getDate() + d)
   }
 }
 
+// 暴露出去使用
 module.exports = {
   formatSales: format.formatSales,
   formatNow: format.formatNow

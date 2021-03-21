@@ -14,6 +14,11 @@ Page({
     platform: '',
     xiaoliang: '',
     dtitle: '',
+    dsrScore: '',
+    shipScore: '',
+    serviceScore: '',
+    shopLogo: '',
+    shopName: '',
     recommendList: [{
       "id": 32018558,
       "goodsId": "593883702546",
@@ -241,8 +246,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log(options)
-    const {id,pic,quan,yuanjia,jiage,platform,xiaoliang,dtitle} = options
+    const {id,pic,quan,yuanjia,jiage,platform,xiaoliang,dtitle,dsrScore,shipScore,serviceScore,shopLogo,shopName} = options
     this.setData({
       id,
       pic,
@@ -251,7 +255,12 @@ Page({
       jiage,
       platform,
       xiaoliang,
-      dtitle
+      dtitle,
+      dsrScore,
+      shipScore,
+      serviceScore,
+      shopLogo,
+      shopName
     })
   },
 

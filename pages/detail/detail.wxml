@@ -44,8 +44,48 @@
       </view>
     </view>
   </view>
-  <view class="comment"></view>
-  <view class="brand"></view>
+  <view class="comment">
+    <view class="commnet_top">
+      <view class="c_left">
+        <image src="https://cmsstatic.ffquan.cn//wap_new/main/images/avatar@2x.png"></image>
+        <text>达人推荐</text>
+      </view>
+      <view class="c_right">17次分享</view>
+    </view>
+    <view class="comment_bottom">
+      【任选4件券后9.9】超值坚果大礼包，混合干果组合小吃，核桃，巴
+      旦木，开心果等混合果干，皮薄易剥，果肉肥厚，香甜味美，大人小孩都爱吃，好吃又划算~
+    </view>
+  </view>
+  <view class="brand">
+    <image class="brand_img" src="{{shopLogo}}"></image>
+    <view class="brand_info">
+      <view class="brand_top">
+        <text>{{shopName}}</text>
+        <view class="brand_btn">
+          <van-button hairline plain round type="danger" size="small">进店逛逛</van-button>
+          <van-button round color="linear-gradient(to right, #fe5a33, #ef0f25)" size="small">全部商品</van-button>
+        </view>
+      </view>
+      <view class="brand_bottom">
+        <view class="score_info">
+          <text>描述: </text>
+          <text>{{dsrScore}}</text>
+          <text class="high">高</text>
+        </view>
+        <view class="score_info">
+          <text>卖家: </text>
+          <text>{{shipScore}}</text>
+          <text class="high">高</text>
+        </view>
+        <view class="score_info">
+          <text>物流: </text>
+          <text>{{serviceScore}}</text>
+          <text class="high">高</text>
+        </view>
+      </view>
+    </view>
+  </view>
   <view class="dropMenu"> 
     <van-dropdown-menu>
       <van-dropdown-item value="{{ dropValue }}" options="{{ goodsInfo }}" />

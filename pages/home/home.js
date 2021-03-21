@@ -637,8 +637,18 @@ Page({
       "quan_time": "2021-02-15 23:59:59",
       "is_delete": 0,
       "is_online": 1,
-      "market_group": []
+      "market_group": [],
+      "dsrScore": 4.74,
+      "shipScore": 4.83,
+      "serviceScore": 4.8,
+      "shopLogo": "https://img.alicdn.com/imgextra//20/91/TB1mNs8D7L0gK0jSZFxSutWHVXa.jpg",
+      "shopName": "劲沃田园旗舰店"
     }, {
+      "dsrScore": 4.79,
+      "shipScore": 4.81,
+      "serviceScore": 4.8,
+      "shopLogo": "https://img.alicdn.com/imgextra//eb/fa/TB1PB53clDH8KJjSszcSuvDTFXa.jpg",
+      "shopName": "觉先生家居旗舰店",
       "createTime": "2021-02-13 13:01:03",
       "goodsId": "625360826993",
       "huodongType": 1,
@@ -691,6 +701,11 @@ Page({
       "is_online": 1,
       "market_group": [70]
     }, {
+      "dsrScore": 4.84,
+      "shipScore": 4.87,
+      "serviceScore": 4.87,
+      "shopLogo": "https://img.alicdn.com/imgextra//1f/9d/TB1aVmBm6nD8KJjSspbwu2bEXXa.png",
+      "shopName": "闪魔旗舰店",
       "createTime": "2021-02-13 10:59:26",
       "goodsId": "42755591315",
       "huodongType": 1,
@@ -738,6 +753,11 @@ Page({
       "is_online": 1,
       "market_group": []
     }, {
+      "dsrScore": 4.84,
+      "shipScore": 4.87,
+      "serviceScore": 4.87,
+      "shopLogo": "https://img.alicdn.com/imgextra//1f/9d/TB1aVmBm6nD8KJjSspbwu2bEXXa.png",
+      "shopName": "闪魔旗舰店",
       "createTime": "2021-02-13 12:03:26",
       "goodsId": "41416705409",
       "huodongType": 1,
@@ -790,6 +810,11 @@ Page({
       "is_online": 1,
       "market_group": [70]
     }, {
+      "dsrScore": 4.89,
+      "shipScore": 4.89,
+      "serviceScore": 4.89,
+      "shopLogo": "https://img.alicdn.com/imgextra//1f/9d/TB1aVmBm6nD8KJjSspbwu2bEXXa.png",
+      "shopName": "顶锅螺旗舰店",
       "createTime": "2021-02-13 09:03:03",
       "goodsId": "582867029859",
       "huodongType": 2,
@@ -838,6 +863,11 @@ Page({
       "is_online": 1,
       "market_group": [70]
     }, {
+      "dsrScore": 4.74,
+      "shipScore": 4.83,
+      "serviceScore": 4.8,
+      "shopLogo": "https://img.alicdn.com/imgextra//20/91/TB1mNs8D7L0gK0jSZFxSutWHVXa.jpg",
+      "shopName": "劲沃田园旗舰店",
       "createTime": "2021-02-13 13:53:05",
       "goodsId": "619573206716",
       "huodongType": 1,
@@ -890,6 +920,11 @@ Page({
       "is_online": 1,
       "market_group": [70]
     }, {
+      "dsrScore": 4.89,
+      "shipScore": 4.83,
+      "serviceScore": 4.84,
+      "shopLogo": "https://img.alicdn.com/imgextra//i4/2258006982/O1CN01cKSnFk21RnrND49Ms_!!2258006982.jpg",
+      "shopName": "健美创研旗舰店",
       "createTime": "2021-02-13 10:46:13",
       "goodsId": "633656397444",
       "huodongType": 1,
@@ -938,6 +973,11 @@ Page({
       "is_online": 1,
       "market_group": [70]
     }, {
+      "dsrScore": 4.9,
+      "shipScore": 4.88,
+      "serviceScore": 4.88,
+      "shopLogo": "https://img.alicdn.com/imgextra//ff/e1/TB1uPnKKZbpK1RjSZFySut_qFXa.jpg",
+      "shopName": "顺生福食品专营店",
       "createTime": "2021-02-13 08:55:03",
       "goodsId": "631243883605",
       "huodongType": 2,
@@ -990,6 +1030,11 @@ Page({
       "is_online": 1,
       "market_group": [70]
     }, {
+      "dsrScore": 4.87,
+      "shipScore": 4.85,
+      "serviceScore": 4.84,
+      "shopLogo": "https://img.alicdn.com/imgextra//91/3f/TB1tuQvNpXXXXXZXVXXSutbFXXX.jpg",
+      "shopName": "优贝舒旗舰店",
       "createTime": "2021-02-13 09:47:03",
       "goodsId": "633356459149",
       "huodongType": 1,
@@ -1038,6 +1083,11 @@ Page({
       "is_online": 1,
       "market_group": [70]
     }, {
+      "dsrScore": 4.86,
+      "shipScore": 4.89,
+      "serviceScore": 4.88,
+      "shopLogo": "https://img.alicdn.com/imgextra//i1/4035021764/O1CN011Otx86AfyZi9KYM_!!4035021764.png",
+      "shopName": "红小厨旗舰店",
       "createTime": "2021-02-13 00:02:02",
       "goodsId": "564677404266",
       "huodongType": 1,

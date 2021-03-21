@@ -2,7 +2,7 @@
 
 <view class="goods_list">
   <navigator class="goods_detail" wx:for="{{mockData}}" wx:key="*this"
-             url="{{'/pages/detail/detail?id='+item.id+'&pic='+item.pic+'&quan='+ item.quanJine+'&yuanjia='+item.yuanjia+'&jiage='+item.jiage+'&platform='+item.beforeTitleLables[0].img+'&xiaoliang='+item.xiaoliang+'&dtitle='+item.dtitle}}">
+             url="{{'/pages/detail/detail?id='+item.id+'&pic='+item.pic+'&quan='+ item.quanJine+'&yuanjia='+item.yuanjia+'&jiage='+item.jiage+'&platform='+item.beforeTitleLables[0].img+'&xiaoliang='+item.xiaoliang+'&dtitle='+item.dtitle+'&dsrScore='+item.dsrScore+'&shipScore='+item.shipScore+'&serviceScore='+item.serviceScore+'&shopLogo='+item.shopLogo+'&shopName='+item.shopName}}">
     <image class="goods_img" src="{{item.pic}}"></image>
     <view class="goods_container">
       <view class="goods_name">
@@ -10,13 +10,11 @@
         <text>{{item.dtitle}}</text>
       </view>
       <view class="goods_price">
-        <text style="font-size:12px;color:#666;">券后</text>
-        <text style="font-size:12px;color:#ff2b22;">￥</text>
-        <text style="font-size:18px;color:#ff2b22;">{{item.jiage}}</text>
+        <text style="font-size:13px;color:#666;">券后</text>
+        <text style="font-size:13px;color:#ff2b22;">￥</text>
+        <text style="font-size:20px;color:#ff2b22;">{{item.jiage}}</text>
       </view>
       <view class="label">
-        <text class="labelOne" wx:if="{{item.labelOne}}">{{item.labelOne}}</text>
-        <text class="labelTwo" wx:if="{{item.labelTwo}}">{{item.labelTwo}}</text>
         <view wx:if="quanJine">
           <text class="ticket_border">券</text>
           <text class="ticlet_value">{{item.quanJine}}元</text>
@@ -28,6 +26,20 @@
       <view class="sales_num" wx:else>
         已售{{format.formatSales(item.xiaoliang,1)}}万
       </view>
+      <view class="shop">
+        <text class="shop_name">{{item.shopName}}</text>
+        <text>进店 > </text>
+      </view>
+      <view class="resemble">
+        找相似
+      </view>
     </view>
   </navigator>
+  <view class="culling">
+    <view class="line"></view>
+    <van-icon name="diamond" color="#FC3F78" />
+    <text>为您精选</text>
+    <view class="line"></view>
+  </view>
+  <goodsList renderList="{{recommendList}}" />
 </view>

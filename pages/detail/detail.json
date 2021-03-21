@@ -10,6 +10,7 @@
     "van-toast": "@vant/weapp/toast/index",
     "van-dropdown-menu": "@vant/weapp/dropdown-menu/index",
     "van-dropdown-item": "@vant/weapp/dropdown-item/index",
+    "van-button": "@vant/weapp/button/index",
     "van-transition": "@vant/weapp/transition/index",
     "goodsList": "/components/goodsList/goodsList",
     "goTop": "/components/goTop/goTop"
