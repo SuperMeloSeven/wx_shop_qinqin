@@ -1,0 +1,7 @@
+.btn_container{
+  width: 80%;
+  margin: 20px auto 0;
+}
+.btn{
+  width: 300rpx;
+}

@@ -1,11 +1,11 @@
 // pages/mine/mine.js
 Page({
-
   /**
    * 页面的初始数据
    */
   data: {
-    token: ''
+    token: false,
+    phone: ''
   },
 
   /**
@@ -26,7 +26,18 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    var stoPhone = wx.getStorageSync('phone')
+    if (stoPhone) {
+      this.setData({
+        token: true,
+        phone: stoPhone
+      })
+    } else {
+      this.setData({
+        token: false,
+        phone: ''
+      })
+    }
   },
 
   /**
@@ -62,5 +73,11 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+
+  goCollect () {
+    wx.switchTab({
+      url: '/pages/collect/collect',
+    })
   }
 })

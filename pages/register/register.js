@@ -1,4 +1,4 @@
-import Toast from '../../miniprogram_npm/@vant/weapp/toast/toast';
+// import Toast from '../../miniprogram_npm/@vant/weapp/dist/toast/toast';
 Page({
   /**
    * 页面的初始数据
@@ -93,22 +93,20 @@ Page({
       })
     }
   },
-  // 保存账号密码并跳转mine
-  handleLogin () {
-    var stoPhone = wx.getStorageSync('phone')
-    var stoPassword = wx.getStorageSync('password')
-    if (stoPhone == this.data.phone && stoPassword == this.data.password) {
-      Toast.success({
-        duration: 1000,
-        message: '登陆成功!',
-        onClose: () => {
-          wx.switchTab({
-            url: '/pages/mine/mine',
-          })
-        }
+  // 保存账号密码并跳转
+  handleRegister () {
+    if (this.data.phoneFlag && this.data.passwordFlag) {
+      wx.setStorage({
+        data: this.data.phone,
+        key: 'phone',
       })
-    } else {
-      Toast.fail('您输入的手机号码或密码有误，请重新输入!')
+      wx.setStorage({
+        data: this.data.password,
+        key: 'password',
+      })
+      wx.navigateTo({
+        url: '/pages/login/login',
+      })
     }
   }
 })

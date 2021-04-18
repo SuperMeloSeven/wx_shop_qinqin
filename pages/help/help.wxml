@@ -1,0 +1,11 @@
+<view class="help_container">
+  <view class="help_item">怎么将商品分享给朋友？</view>
+  <view class="help_item">怎么联系客服？</view>
+  <view class="help_item">如何查看淘宝商品是否有优惠券？</view>
+  <view class="help_item">在哪里查看我下过的订单？</view>
+  <view class="help_item">如何查看商品物流信息？</view>
+  <view class="help_item">优惠券的用途是什么？</view>
+  <view class="help_item">怎么将商品分享给朋友？</view>
+  <view class="help_item">如何领取优惠券？</view>
+  <view class="help_item">如何使用优惠券下单？</view>
+</view>

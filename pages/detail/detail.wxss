@@ -1,3 +1,18 @@
+ .van-cell{
+  height: 50px;
+  padding: 0 !important;
+}
+.van-cell__value{
+  line-height: 50px;
+}
+.van-cell .van-icon{
+  margin-top: 25px !important;
+}
+.active .van-goods-action-icon__icon,
+.active text{
+  color: #bf0000;
+}
+/* ------------ */
 .detail{
   width: 100%;
   height: auto;
@@ -17,6 +32,7 @@
 .goods_notice{
   /* height: 50px; */
   display: flex;
+  height: 100%;
   align-items: center;
   color: orangered;
   background: url(https://img.alicdn.com/imgextra/i2/2053469401/O1CN01naOp5i2JJi1HhJLYo_!!2053469401.png) no-repeat;

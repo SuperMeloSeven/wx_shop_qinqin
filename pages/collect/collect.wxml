@@ -6,7 +6,7 @@
     <image class="goods_img" src="{{item.pic}}"></image>
     <view class="goods_container">
       <view class="goods_name">
-        <image style="width: 23px;height:13px;" src="{{item.beforeTitleLables[0].img}}"></image>
+        <image style="width: 23px;height:13px;" src="{{item.platform}}"></image>
         <text>{{item.dtitle}}</text>
       </view>
       <view class="goods_price">
@@ -17,7 +17,7 @@
       <view class="label">
         <view wx:if="quanJine">
           <text class="ticket_border">券</text>
-          <text class="ticlet_value">{{item.quanJine}}元</text>
+          <text class="ticlet_value">{{item.quan}}元</text>
         </view>
       </view>
       <view class="sales_num" wx:if="{{item.xiaoliang < 10000}}">
@@ -35,6 +35,7 @@
       </view>
     </view>
   </navigator>
+  <van-empty wx:if="{{ !mockData.length }}" description="您的购物车里暂时没有商品哦~" />
   <view class="culling">
     <view class="line"></view>
     <van-icon name="diamond" color="#FC3F78" />

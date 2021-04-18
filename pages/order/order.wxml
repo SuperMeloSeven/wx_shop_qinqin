@@ -1,0 +1,121 @@
+<view class="order_container">
+  <view class="location">
+    <image src="../../resources/iconfonts/location.png"></image>
+    <view class="location_info">
+      <view>
+        <text>用户名称</text>
+        <text class="telphone">13912341234</text>
+      </view>
+      <view>
+        <text>浙江省杭州市桐庐县浙江工商大学杭州商学院</text>
+      </view>
+      <view>
+        <text class="location_cue">收货不便时，可选择暂存服务</text>
+      </view>
+    </view>
+    <van-icon name="arrow" />
+  </view>
+  <view class="goods">
+    <view class="shop_name">
+      <image src="{{ platform }}"></image>
+      <text>{{ shopName }}</text>
+    </view>
+    <view class="goods_info">
+      <image src="{{ pic }}"></image>
+      <view class="goods_info_center">
+        <view class="goods_name">{{ dtitle }}</view>
+        <view class="seven_day">七天无理由退换</view>
+      </view>
+      <view class="goods_info_right">
+        <view class="goods_price">￥{{ jiage }}</view>
+        <view class="goods_num">x1</view>
+      </view>
+    </view>
+    <view class="extra_content">
+      <view class="goods_options" bindtap="handleService">
+        <view>
+          <text>售后服务</text>
+          <text class="checked">未选择</text>
+        </view>
+        <van-icon name="arrow" color="#666" />
+      </view>
+      <view class="goods_options" bindtap="handleExpress">
+        <view>
+          <text>配送方式</text>
+          <text class="checked">普通配送</text>
+        </view>
+        <view>
+          <text class="express">快递 免邮</text>
+          <van-icon name="arrow" color="#666" />
+        </view>
+      </view>
+      <view class="goods_options" bindtap="handleFare">
+        <view style="display: flex; justify-content: space-between;">
+          <van-icon name="question-o" />
+          <text>运费险</text>
+          <text class="checked">卖家赠送，退换货可赔</text>
+        </view>
+        <van-icon name="arrow" color="#666" />
+      </view>
+      <view class="goods_options" bindtap="handleReceipt">
+        <view>
+          <text>开具发票</text>
+        </view>
+        <view>
+          <text class="express">本次不开具发票</text>
+          <van-icon name="arrow" color="#666" />
+        </view>
+      </view>
+      <view class="goods_options">
+        <view>
+          <text>订单备注</text>
+          <text class="checked">选填，请先与商家协商一致</text>
+        </view>
+      </view>
+      <view class="total">
+        <text style="color: #666;margin-right: 5px">共1件</text>
+        <text>小计：</text>
+        <text class="total_price">￥{{ jiage }}</text>
+      </view>
+    </view>
+  </view>
+  <van-popup
+    show="{{ serviceFlag }}"
+    position="bottom"
+    custom-style="height: 40%;"
+    closeable
+    close-icon-position="top-left"
+    bind:close="closeService"
+  >
+  </van-popup>
+  <van-popup
+    show="{{ expressFlag }}"
+    position="bottom"
+    custom-style="height: 40%;"
+    closeable
+    close-icon-position="top-left"
+    bind:close="closeExpress"
+  >
+  </van-popup>
+  <van-popup
+    show="{{ fareFlag }}"
+    position="bottom"
+    custom-style="height: 40%;"
+    closeable
+    close-icon-position="top-left"
+    bind:close="closeFare"
+  ></van-popup>
+  <van-popup
+    show="{{ receiptFlag }}"
+    position="bottom"
+    custom-style="height: 40%;"
+    closeable
+    close-icon-position="top-left"
+    bind:close="closeReceipt"
+  ></van-popup>
+  <van-submit-bar
+    price="{{ totalPrice }}"
+    button-text="提交订单"
+    bind:submit="handleSubmit"
+  />
+</view>

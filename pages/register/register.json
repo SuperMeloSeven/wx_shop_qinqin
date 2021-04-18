@@ -7,5 +7,5 @@
     "van-button": "@vant/weapp/button/index",
     "van-toast": "@vant/weapp/toast/index"
   },
-  "navigationBarTitleText": "登陆"
+  "navigationBarTitleText": "注册"
 }

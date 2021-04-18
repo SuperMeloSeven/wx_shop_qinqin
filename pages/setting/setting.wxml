@@ -26,9 +26,9 @@
     url="/pages/dashboard/index"
     />
   </view>
-  <view class="set_options" wx:if="{{token}}">
-    <van-cell link-type="switchTab" url="/pages/mine/mine">
-      <view class="exit" slot="title">退出登陆</view>
+  <view class="set_options">
+    <van-cell link-type="switchTab" url="/pages/mine/mine" bind:click="removePhone">
+      <view class="exit" slot="title" >退出登陆</view>
     </van-cell>
   </view>
 </view>

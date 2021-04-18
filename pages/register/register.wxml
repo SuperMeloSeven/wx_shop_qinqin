@@ -7,15 +7,13 @@
   </van-cell-group>
   <view class="login_btn">
     <van-button disabled="{{!phoneFlag || !passwordFlag}}" color="linear-gradient(to right, #fa51b9, #fba85a)" 
-      bind:click="handleLogin" size="large" round >登陆</van-button>
+      bind:click="handleRegister" size="large" round >注册</van-button>
   </view>
   <view class="cue">
-    <text>还没有账号？立即</text>
-    <navigator class="goReg" url="{{'/pages/register/register'}}">注册</navigator>
+    <text>已有账号？立即</text>
+    <navigator class="goReg" url="{{'/pages/login/login'}}">登陆</navigator>
   </view>
   <view class="footer">
-    <navigator>验证码登陆</navigator>
-    <navigator class="mg_10">找回密码</navigator>
+    点击“注册”代表您同意《小猪商城用户协议》
   </view>
-  <van-toast id="van-toast" />
 </view>

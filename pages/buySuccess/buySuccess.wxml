@@ -1,0 +1,14 @@
+<view class="buySuccess_container">
+  <view class="buySuccess_box">
+    <text>购买成功！</text>
+    <text>您的宝贝打包中，请耐心等待哦~</text>
+    <van-button class="btn_style" round type="info" color="#bf0000" size="small" bind:click="goHome">回到首页</van-button>
+  </view>
+  <view class="culling">
+    <view class="line"></view>
+    <van-icon name="diamond" color="#FC3F78" />
+    <text>为您精选</text>
+    <view class="line"></view>
+  </view>
+  <goodsList renderList="{{recommendList}}" />
+</view>

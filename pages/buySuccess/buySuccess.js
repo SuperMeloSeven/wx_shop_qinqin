@@ -1,24 +1,10 @@
-import Toast from '../../miniprogram_npm/@vant/weapp/toast/toast';
-
+// pages/buySuccess/buySuccess.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    id: '',
-    pic: '',
-    quan: '',
-    yuanjia: '',
-    jiage: '',
-    platform: '',
-    xiaoliang: '',
-    dtitle: '',
-    dsrScore: '',
-    shipScore: '',
-    serviceScore: '',
-    shopLogo: '',
-    shopName: '',
     recommendList: [{
       "id": 32018558,
       "goodsId": "593883702546",
@@ -225,44 +211,13 @@ Page({
         "height": 26
       }]
     }],
-    showGoTop: false,
-    showShare: false,
-    options: [
-      { name: '微信', icon: 'wechat', openType: 'share' },
-      { name: '微博', icon: 'weibo' },
-      { name: '复制链接', icon: 'link' },
-      { name: '分享海报', icon: 'poster' },
-      { name: '二维码', icon: 'qrcode' },
-    ],
-    goodsInfo: [
-      { text: '全部商品', value: 0 },
-      { text: '新款商品', value: 1 },
-      { text: '活动商品', value: 2 },
-    ],
-    dropValue: 0,
-    collectFlag: false
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    const {id,pic,quan,yuanjia,jiage,platform,xiaoliang,dtitle,dsrScore,shipScore,serviceScore,shopLogo,shopName} = options
-    this.setData({
-      id,
-      pic,
-      quan,
-      yuanjia,
-      jiage,
-      platform,
-      xiaoliang,
-      dtitle,
-      dsrScore,
-      shipScore,
-      serviceScore,
-      shopLogo,
-      shopName
-    })
+
   },
 
   /**
@@ -276,19 +231,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    let _this = this
-    wx.getStorage({
-      key: 'collectArr',
-      success (res) {
-        res.data.filter(v => {
-          if (v.id === _this.data.id) {
-            _this.setData({
-              collectFlag: true
-            })
-          }
-        })
-      } 
-    })
+
   },
 
   /**
@@ -325,95 +268,10 @@ Page({
   onShareAppMessage: function () {
 
   },
-  onPageScroll(res){
-    if(res.scrollTop >= 700){
-      this.setData({
-        showGoTop: true
-      })
-    }else{
-      this.setData({
-        showGoTop: false
-      })
-    }
-  },
 
-  shareClick(event) {
-    this.setData({ showShare: true });
-  },
-
-  shareClose() {
-    this.setData({ showShare: false });
-  },
-
-  shareSelect(event) {
-    Toast(event.detail.name);``
-    this.shareClose();
-  },
-
-  collectClick(){
-    this.setData({
-      collectFlag: true
-    })
-
-    let _this = this
-    console.log(_this.data.platform);
-    wx.getStorage({
-      key: 'collectArr',
-      success (res) {
-        let addContent = {
-          id: _this.data.id,
-          platform: _this.data.platform,
-          dtitle: _this.data.dtitle,
-          jiage: _this.data.jiage,
-          quan: _this.data.quan,
-          xiaoliang: _this.data.xiaoliang,
-          shopName: _this.data.shopName,
-          pic: _this.data.pic
-        }
-        res.data.push(addContent)
-        wx.setStorage({
-          data: res.data,
-          key: 'collectArr',
-        })
-      },
-      fail () {
-        let addCollect = [{
-          id: _this.data.id,
-          platform: _this.data.platform,
-          dtitle: _this.data.dtitle,
-          jiage: _this.data.jiage,
-          quan: _this.data.quan,
-          xiaoliang: _this.data.xiaoliang,
-          shopName: _this.data.shopName,
-          pic: _this.data.pic
-        }]
-        wx.setStorage({
-          data: addCollect,
-          key: 'collectArr',
-        })
-      }
-    })
-  },
-
-  collectCancel (e) {
-    console.log(e.target.dataset.id);
-    this.setData({
-      collectFlag: false
-    })
-    wx.getStorage({
-      key: 'collectArr',
-      success (res) {
-        wx.setStorage({
-          data: res.data.filter(v => e.target.dataset.id !== v.id),
-          key: 'collectArr',
-        })
-      }
-    })
-  },
-
-  goOrder () {
-    wx.navigateTo({
-      url: `/pages/order/order?id=${this.data.id}&shopName=${this.data.shopName}&pic=${this.data.pic}&jiage=${this.data.jiage}&platform=${this.data.platform}&dtitle=${this.data.dtitle}`,
+  goHome () {
+    wx.switchTab({
+      url: '/pages/home/home',
     })
   }
 })

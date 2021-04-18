@@ -1,11 +1,11 @@
-// pages/setting/setting.js
+// pages/sprog/sprog.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    token: '1'
+
   },
 
   /**
@@ -62,17 +62,5 @@ Page({
    */
   onShareAppMessage: function () {
 
-  },
-
-  removePhone (){
-    wx.removeStorage({
-      key: 'phone',
-    })
-    wx.removeStorage({
-      key: 'password',
-    })
-    wx.switchTab({
-      url: '/pages/mine/mine',
-    })
   }
 })

@@ -1,0 +1,21 @@
+.sprog_container{
+  max-width: 750rpx;
+  /* height: 100%; */
+}
+image{
+  width: 100%;
+  /* margin-top: -5px; */
+  display: block;
+}
+.img1{
+  height: 420px;
+}
+.img2{
+  height: 270px;
+}
+.img3{
+  height: 336px;
+}
+.img4{
+  height: 375px;
+}

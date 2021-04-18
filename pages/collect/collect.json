@@ -1,7 +1,8 @@
 {
   "usingComponents": {
     "goodsList": "/components/goodsList/goodsList",
-    "van-icon": "@vant/weapp/icon/index"
+    "van-icon": "@vant/weapp/icon/index",
+    "van-empty": "@vant/weapp/empty/index"
   },
   "navigationBarTitleText": "我的收藏"
 }

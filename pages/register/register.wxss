@@ -1,9 +1,6 @@
 view.van-nav-bar{
   padding-top: 0 !important;
 }
-.van-toast--icon{
-  width: 150px !important;
-}
 /* ---------------- */
 page{
   height: 100%;

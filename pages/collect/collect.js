@@ -5,114 +5,115 @@ Page({
    * 页面的初始数据
    */
   data: {
-    mockData: [
-      {
-      "dsrScore": 4.89,
-      "shipScore": 4.83,
-      "serviceScore": 4.84,
-      "shopLogo": "https://img.alicdn.com/imgextra//i4/2258006982/O1CN01cKSnFk21RnrND49Ms_!!2258006982.jpg",
-      "shopName": "健美创研旗舰店",
-      "createTime": "2021-02-13 10:46:13",
-      "goodsId": "633656397444",
-      "huodongType": 1,
-      "hzQuanOver": 0,
-      "id": 32048302,
-      "pic": "https://img.alicdn.com/imgextra/i4/2928278102/O1CN01AQ3qsO29ilZGHn5WT_!!0-item_pic.jpg",
-      "quanId": "3b80b61710334dccb691d6b95898ef91",
-      "quanJine": 3.0,
-      "salesNum": 223,
-      "startTime": "2021-02-13 00:00:00",
-      "title": "仁和一次性医用口罩医疗三层防护成人医生医科外用防风防寒大人",
-      "tmall": 1,
-      "video": 0,
-      "xiaoliang": 185203,
-      "yongjin": 30.02,
-      "yuanjia": 8.9,
-      "fashionTag": "官方旗舰店,爆款",
-      "jiage": 5.9,
-      "marketId": "70",
-      "basePriceText": "",
-      "basePrice": "",
-      "baseSaleNumText": "",
-      "thirtySellNun": 126162,
-      "promotion": "",
-      "labelOne": "爆款",
-      "comments": "",
-      "beforeTitleLables": [{
-        "img": "https://img.alicdn.com/imgextra/i1/2053469401/O1CN01o1MI292JJhz37UySP_!!2053469401.png",
-        "width": 48,
-        "height": 26
-      }],
-      "beforePriceLabelType": 0,
-      "underPriceLabels": [{
-        "type": "normal",
-        "val": "爆款"
-      }],
-      "renqi": 37.14,
-      "_id": "32048302",
-      "category_id": "122354006",
-      "dtitle": "【阿里大药房】仁和医用3层口罩10个",
-      "lowest": 0,
-      "quanMLink": "0",
-      "quan_num": 92000,
-      "quan_time": "2021-02-24 23:59:59",
-      "is_delete": 0,
-      "is_online": 1,
-      "market_group": [70]
-    },{
-      "dsrScore": 4.87,
-      "shipScore": 4.85,
-      "serviceScore": 4.84,
-      "shopLogo": "https://img.alicdn.com/imgextra//91/3f/TB1tuQvNpXXXXXZXVXXSutbFXXX.jpg",
-      "shopName": "优贝舒旗舰店",
-      "createTime": "2021-02-13 09:47:03",
-      "goodsId": "633356459149",
-      "huodongType": 1,
-      "hzQuanOver": 0,
-      "id": 32048263,
-      "pic": "//img.alicdn.com/imgextra/i3/2940753275/O1CN01otE0JJ1a3zkmEuPql_!!2940753275.jpg",
-      "quanId": "867777d6f8f1486b917ee912056fbbe6",
-      "quanJine": 15.0,
-      "salesNum": 39,
-      "startTime": "2021-02-13 00:00:00",
-      "title": "德佑婴儿拉拉裤超薄透气彩虹pp裤纸尿裤smlxlxxlXXXL新生儿尿不湿",
-      "tmall": 1,
-      "video": 0,
-      "xiaoliang": 25690,
-      "yongjin": 15.0,
-      "yuanjia": 79.0,
-      "fashionTag": "官方旗舰店",
-      "jiage": 64.0,
-      "marketId": "70",
-      "basePriceText": "",
-      "basePrice": "",
-      "baseSaleNumText": "",
-      "thirtySellNun": 6712,
-      "promotion": "",
-      "labelTwo": "旗舰店",
-      "comments": "",
-      "beforeTitleLables": [{
-        "img": "https://img.alicdn.com/imgextra/i1/2053469401/O1CN01o1MI292JJhz37UySP_!!2053469401.png",
-        "width": 48,
-        "height": 26
-      }],
-      "beforePriceLabelType": 0,
-      "underPriceLabels": [{
-        "type": "primary",
-        "val": "旗舰店"
-      }],
-      "renqi": 36.4913,
-      "_id": "32048263",
-      "category_id": "201217101",
-      "dtitle": "德佑婴儿XXL码拉拉裤XL  超薄透气",
-      "lowest": 0,
-      "quanMLink": "",
-      "quan_num": 50000,
-      "quan_time": "2021-02-17 23:59:59",
-      "is_delete": 0,
-      "is_online": 1,
-      "market_group": [70]
-    }],
+    // mockData: [
+    //   {
+    //   "dsrScore": 4.89,
+    //   "shipScore": 4.83,
+    //   "serviceScore": 4.84,
+    //   "shopLogo": "https://img.alicdn.com/imgextra//i4/2258006982/O1CN01cKSnFk21RnrND49Ms_!!2258006982.jpg",
+    //   "shopName": "健美创研旗舰店",
+    //   "createTime": "2021-02-13 10:46:13",
+    //   "goodsId": "633656397444",
+    //   "huodongType": 1,
+    //   "hzQuanOver": 0,
+    //   "id": 32048302,
+    //   "pic": "https://img.alicdn.com/imgextra/i4/2928278102/O1CN01AQ3qsO29ilZGHn5WT_!!0-item_pic.jpg",
+    //   "quanId": "3b80b61710334dccb691d6b95898ef91",
+    //   "quanJine": 3.0,
+    //   "salesNum": 223,
+    //   "startTime": "2021-02-13 00:00:00",
+    //   "title": "仁和一次性医用口罩医疗三层防护成人医生医科外用防风防寒大人",
+    //   "tmall": 1,
+    //   "video": 0,
+    //   "xiaoliang": 185203,
+    //   "yongjin": 30.02,
+    //   "yuanjia": 8.9,
+    //   "fashionTag": "官方旗舰店,爆款",
+    //   "jiage": 5.9,
+    //   "marketId": "70",
+    //   "basePriceText": "",
+    //   "basePrice": "",
+    //   "baseSaleNumText": "",
+    //   "thirtySellNun": 126162,
+    //   "promotion": "",
+    //   "labelOne": "爆款",
+    //   "comments": "",
+    //   "beforeTitleLables": [{
+    //     "img": "https://img.alicdn.com/imgextra/i1/2053469401/O1CN01o1MI292JJhz37UySP_!!2053469401.png",
+    //     "width": 48,
+    //     "height": 26
+    //   }],
+    //   "beforePriceLabelType": 0,
+    //   "underPriceLabels": [{
+    //     "type": "normal",
+    //     "val": "爆款"
+    //   }],
+    //   "renqi": 37.14,
+    //   "_id": "32048302",
+    //   "category_id": "122354006",
+    //   "dtitle": "【阿里大药房】仁和医用3层口罩10个",
+    //   "lowest": 0,
+    //   "quanMLink": "0",
+    //   "quan_num": 92000,
+    //   "quan_time": "2021-02-24 23:59:59",
+    //   "is_delete": 0,
+    //   "is_online": 1,
+    //   "market_group": [70]
+    // },{
+    //   "dsrScore": 4.87,
+    //   "shipScore": 4.85,
+    //   "serviceScore": 4.84,
+    //   "shopLogo": "https://img.alicdn.com/imgextra//91/3f/TB1tuQvNpXXXXXZXVXXSutbFXXX.jpg",
+    //   "shopName": "优贝舒旗舰店",
+    //   "createTime": "2021-02-13 09:47:03",
+    //   "goodsId": "633356459149",
+    //   "huodongType": 1,
+    //   "hzQuanOver": 0,
+    //   "id": 32048263,
+    //   "pic": "//img.alicdn.com/imgextra/i3/2940753275/O1CN01otE0JJ1a3zkmEuPql_!!2940753275.jpg",
+    //   "quanId": "867777d6f8f1486b917ee912056fbbe6",
+    //   "quanJine": 15.0,
+    //   "salesNum": 39,
+    //   "startTime": "2021-02-13 00:00:00",
+    //   "title": "德佑婴儿拉拉裤超薄透气彩虹pp裤纸尿裤smlxlxxlXXXL新生儿尿不湿",
+    //   "tmall": 1,
+    //   "video": 0,
+    //   "xiaoliang": 25690,
+    //   "yongjin": 15.0,
+    //   "yuanjia": 79.0,
+    //   "fashionTag": "官方旗舰店",
+    //   "jiage": 64.0,
+    //   "marketId": "70",
+    //   "basePriceText": "",
+    //   "basePrice": "",
+    //   "baseSaleNumText": "",
+    //   "thirtySellNun": 6712,
+    //   "promotion": "",
+    //   "labelTwo": "旗舰店",
+    //   "comments": "",
+    //   "beforeTitleLables": [{
+    //     "img": "https://img.alicdn.com/imgextra/i1/2053469401/O1CN01o1MI292JJhz37UySP_!!2053469401.png",
+    //     "width": 48,
+    //     "height": 26
+    //   }],
+    //   "beforePriceLabelType": 0,
+    //   "underPriceLabels": [{
+    //     "type": "primary",
+    //     "val": "旗舰店"
+    //   }],
+    //   "renqi": 36.4913,
+    //   "_id": "32048263",
+    //   "category_id": "201217101",
+    //   "dtitle": "德佑婴儿XXL码拉拉裤XL  超薄透气",
+    //   "lowest": 0,
+    //   "quanMLink": "",
+    //   "quan_num": 50000,
+    //   "quan_time": "2021-02-17 23:59:59",
+    //   "is_delete": 0,
+    //   "is_online": 1,
+    //   "market_group": [70]
+    // }],
+    mockData: [],
     recommendList: [{
       "id": 32018558,
       "goodsId": "593883702546",
@@ -339,7 +340,20 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    let _this = this
+    wx.getStorage({
+      key: 'collectArr',
+      success (res) {
+        _this.setData({
+          mockData: res.data
+        })
+      },
+      fail () {
+        _this.setData({
+          
+        })
+      }
+    })
   },
 
   /**

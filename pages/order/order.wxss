@@ -1,0 +1,106 @@
+page{
+  background-color: #f6f6f6;
+}
+.van-submit-bar{
+  z-index: 99 !important;
+}
+
+.order_container{
+  padding: 10px;
+}
+.location{
+  background-color: #fff;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.location image{
+  width: 30px;
+  height: 30px;
+}
+.location_info{
+  font-size: 13px;
+}
+.telphone{
+  color: #666;
+  margin-left: 5px;
+}
+.location_cue{
+  color: orangered;
+}
+/* ----------- */
+.goods{
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #fff;
+  font-size: 13px;
+}
+.shop_name{
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+.shop_name image{
+  width: 23px;
+  height: 13px;
+  margin-right: 5px;
+}
+.goods_info{
+  display: flex;
+}
+.goods_info image{
+  width: 80px;
+  height: 75px;
+  margin-right: 10px;
+}
+.goods_info_center{
+  width: 60%;
+  margin-right: 10px;
+}
+.goods_name{
+  width: 100%;
+}
+.seven_day{
+  width: 100px;
+  text-align: center;
+  background-color: #fad3c1;
+  color: orangered;
+  margin-top: 5px;
+}
+.goods_info_right{
+  width: 50px;
+  text-align: right;
+}
+.goods_price{
+  font-size: 15px;
+}
+.goods_num{
+  color: #666;
+}
+/* ---------- */
+.extra_content{
+  margin-top: 10px;
+  padding-left: 50px;
+}
+.goods_options{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.checked{
+  margin-left: 7px;
+  color: #666;
+}
+.express{
+  margin-right: 5px;
+}
+.total{
+  text-align: right;
+  font-size: 15px;
+}
+.total_price{
+  color: orangered;
+}

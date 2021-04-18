@@ -1,0 +1,22 @@
+<view class="feedback_container">
+  <van-cell-group>
+    <van-field
+      model:value="{{content}}"
+      type="textarea"
+      clearable
+      autosize
+      label="反馈内容"
+      placeholder="请输入您要反馈的内容（最多100字）"
+      bind:click-icon="onClickIcon"
+    />
+    <van-field
+      model:value="{{contact}}"
+      label="联系方式"
+      placeholder="请填写您的联系QQ或邮箱"
+      border="{{ false }}"
+    />
+  </van-cell-group>
+  <view class="btn_container">
+    <van-button disabled="{{!contact || !content}}" class="btn" block color="#ff2448" round type="info">提交</van-button>
+  </view>
+</view>

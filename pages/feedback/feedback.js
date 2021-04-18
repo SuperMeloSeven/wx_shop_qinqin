@@ -1,11 +1,12 @@
-// pages/setting/setting.js
+// pages/feedback/feedback.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    token: '1'
+    content: '',
+    contact: ''
   },
 
   /**
@@ -62,17 +63,5 @@ Page({
    */
   onShareAppMessage: function () {
 
-  },
-
-  removePhone (){
-    wx.removeStorage({
-      key: 'phone',
-    })
-    wx.removeStorage({
-      key: 'password',
-    })
-    wx.switchTab({
-      url: '/pages/mine/mine',
-    })
   }
 })

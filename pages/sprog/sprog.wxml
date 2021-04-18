@@ -1,0 +1,8 @@
+<view class="sprog_container">
+  <image class="img1" src="https://cmsstaticnew.dataoke.com//wap_new/activity/voucher_help/ant_01.jpg?v=202103261527"></image>
+  <image class="img2" src="https://cmsstaticnew.dataoke.com//wap_new/activity/voucher_help/ant_02.jpg?v=202103261527"></image>
+  <image class="img3"  src="https://cmsstaticnew.dataoke.com//wap_new/activity/voucher_help/ant_03.jpg?v=202103261527"></image>
+  <image style="height: 497px" src="https://cmsstaticnew.dataoke.com//wap_new/activity/voucher_help/ant_04.jpg?v=202103261527"></image>
+  <image style="height: 367px" src="https://cmsstaticnew.dataoke.com//wap_new/activity/voucher_help/ant_05.jpg?v=202103261527"></image>
+  <image style="height: 545px" src="https://cmsstaticnew.dataoke.com//wap_new/activity/voucher_help/ant_06.jpg?v=202103261527"></image>
+</view>
