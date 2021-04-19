@@ -16,11 +16,11 @@
           <view class="cate_list">
             <view class="cate_title">{{v.name}}</view>
             <view class="cate_info_container">
-              <navigator class="cate_info" url="{{'/pages/detail/detail?id=1'}}"
+              <view class="cate_info" bindtap="goHome"
                          wx:for="{{v.list}}" wx:key="*this" wx:for-item="list">
                 <image src="{{list.img}}"></image>
                 <text>{{list.name}}</text>
-              </navigator>
+              </view>
             </view>
           </view>
         </view>

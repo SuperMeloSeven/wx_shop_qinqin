@@ -79,5 +79,10 @@ Page({
     wx.switchTab({
       url: '/pages/collect/collect',
     })
+  },
+  goHome () {
+    wx.switchTab({
+      url: '/pages/home/home',
+    })
   }
 })

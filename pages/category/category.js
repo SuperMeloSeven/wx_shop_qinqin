@@ -1836,5 +1836,10 @@ Page({
     this.setData({
       activeIndex: event.detail
     })
+  },
+  goHome () {
+    wx.switchTab({
+      url: '/pages/home/home',
+    })
   }
 })
