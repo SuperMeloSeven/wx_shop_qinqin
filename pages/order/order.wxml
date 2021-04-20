@@ -18,7 +18,7 @@
   <view class="goods">
     <view class="shop_name">
       <image src="{{ platform }}"></image>
-      <text wx:if="!shopName">小猪商城直营店</text>
+      <text wx:if="{{shopName == 'undefined'}}">小猪商城直营店</text>
       <text wx:else>{{ shopName }}</text>
     </view>
     <view class="goods_info">

@@ -27,7 +27,8 @@
         已售{{format.formatSales(item.xiaoliang,1)}}万
       </view>
       <view class="shop">
-        <text class="shop_name">{{item.shopName}}</text>
+        <text class="shop_name" wx:if="{{item.shopName == 'undefined'}}">小猪商城直营店</text>
+        <text class="shop_name" wx:else>{{item.shopName}}</text>
         <text>进店 > </text>
       </view>
       <view class="resemble">

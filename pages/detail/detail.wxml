@@ -18,7 +18,7 @@
         <view class="goods_price">
           <text class="price_flag">￥ </text>
           <text class="new_price">{{jiage}}</text>
-          <text class="old_price" wx:if="!yuanjia"> 原价￥{{30}}</text>
+          <text class="old_price" wx:if="{{yuanjia == 'undefined'}}"> 原价￥30</text>
           <text class="old_price" wx:else> 原价￥{{ yuanjia }}</text>
         </view>
         <view class="stock">
@@ -34,7 +34,7 @@
       <view class="info_bottom">
         <view class="ticket_left">
           <text class="price_flag">￥</text>
-          <text class="new_price" wx:if="!quan">{{3}}</text>
+          <text class="new_price" wx:if="{{quan == 'undefined'}}">3</text>
           <text class="new_price" wx:else>{{quan}}</text>
           <view class="ticket_rules">
             <text>优惠券使用权限 \n {{format.formatNow(0)}} - {{format.formatNow(7)}}</text>
@@ -60,11 +60,11 @@
     </view>
   </view>
   <view class="brand">
-    <image class="brand_img" wx:if="!shopLogo" src="../../resources/iconfonts/xiaozhu.png"></image>
+    <image class="brand_img" wx:if="{{ shopLogo == 'undefined' }}" src="../../resources/iconfonts/xiaozhu.png"></image>
     <image class="brand_img" wx:else src="{{shopLogo}}"></image>
     <view class="brand_info">
       <view class="brand_top">
-        <text wx:if="!shopName">小猪商城直营店</text>
+        <text wx:if="{{ shopName == 'undefined' }}">小猪商城直营店</text>
         <text wx:else>{{shopName}}</text>
         <view class="brand_btn">
           <van-button hairline plain round type="danger" size="small">进店逛逛</van-button>
@@ -74,19 +74,19 @@
       <view class="brand_bottom">
         <view class="score_info">
           <text>描述: </text>
-          <text wx:if="!dsrScore">{{9.1}}</text>
+          <text wx:if="{{ dsrScore == 'undefined' }}">9.1</text>
           <text wx:else>{{dsrScore}}</text>
           <text class="high">高</text>
         </view>
         <view class="score_info">
           <text>卖家: </text>
-          <text wx:if="!shipScore">9.4</text>
+          <text wx:if="{{ shipScore == 'undefined' }}">9.4</text>
           <text wx:else>{{shipScore}}</text>
           <text class="high">高</text>
         </view>
         <view class="score_info">
           <text>物流: </text>
-          <text wx:if="!serviceScore">9.2</text>
+          <text wx:if="{{ serviceScore == 'undefined' }}">9.2</text>
           <text wx:else>{{serviceScore}}</text>
           <text class="high">高</text>
         </view>

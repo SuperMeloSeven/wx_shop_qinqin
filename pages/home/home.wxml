@@ -136,7 +136,7 @@
             </view>
           </view>
         </view>
-        <view class="goods_detail" wx:for="{{goodsList}}" wx:key="*this">
+        <!-- <view class="goods_detail" wx:for="{{goodsList}}" wx:key="*this">
           <image class="goods_img" src="{{item.pic}}"></image>
           <view class="goods_container">
             <view class="goods_name">
@@ -160,24 +160,24 @@
               已售{{format.formatSales(item.xiaoliang,1)}}万
             </view>
           </view>
-        </view>
+        </view> -->
+        <goodsList renderList="{{goodsList}}" />
+        <goTop wx:if="{{showGoTop}}" />
       </view>
-      <goodsList renderList="{{goodsList}}" />
-      <goTop wx:if="{{showGoTop}}" />
     </van-tab>
-<van-tab title="美食">内容 2</van-tab>
-<van-tab title="鞋品">内容 3</van-tab>
-<van-tab title="女装">内容 4</van-tab>
-<van-tab title="美妆">内容 5</van-tab>
-<van-tab title="男装">内容 6</van-tab>
-<van-tab title="数码家电">内容 4</van-tab>
-<van-tab title="居家日用">内容 5</van-tab>
-<van-tab title="内衣">内容 6</van-tab>
-<van-tab title="母婴">内容 6</van-tab>
-<van-tab title="家装家纺">内容 6</van-tab>
-<van-tab title="文娱车品">内容 6</van-tab>
-<van-tab title="配饰">内容 6</van-tab>
-<van-tab title="箱包">内容 6</van-tab>
-<van-tab title="户外运动">内容 6</van-tab>
-</van-tabs>
+    <van-tab title="美食">内容 2</van-tab>
+    <van-tab title="鞋品">内容 3</van-tab>
+    <van-tab title="女装">内容 4</van-tab>
+    <van-tab title="美妆">内容 5</van-tab>
+    <van-tab title="男装">内容 6</van-tab>
+    <van-tab title="数码家电">内容 4</van-tab>
+    <van-tab title="居家日用">内容 5</van-tab>
+    <van-tab title="内衣">内容 6</van-tab>
+    <van-tab title="母婴">内容 6</van-tab>
+    <van-tab title="家装家纺">内容 6</van-tab>
+    <van-tab title="文娱车品">内容 6</van-tab>
+    <van-tab title="配饰">内容 6</van-tab>
+    <van-tab title="箱包">内容 6</van-tab>
+    <van-tab title="户外运动">内容 6</van-tab>
+  </van-tabs>
 </view>
