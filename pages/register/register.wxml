@@ -4,6 +4,15 @@
       icon="question-o" size="large" placeholder="请输入手机号码" maxlength="11" bind:click-icon="onClickIcon" />
     <van-field type="password" label="密码" size="large" value="{{ password }}" bind:input="savePassword"
       placeholder="请输入密码" maxlength="16" border="{{ false }}" />
+    <van-field label="验证码" size="large" value="{{ sms }}" bind:input="saveSms"
+      placeholder="请输入短信验证码" maxlength="4" border="{{ false }}">
+      <van-button slot="button" wx:if="{{ !sec }}" size="small" type="danger" bind:click="sendSmsCode">
+        发送验证码
+      </van-button>
+      <van-button slot="button" wx:else size="small" type="danger">
+        {{sec}}
+      </van-button>
+    </van-field>
   </van-cell-group>
   <view class="login_btn">
     <van-button disabled="{{!phoneFlag || !passwordFlag}}" color="linear-gradient(to right, #fa51b9, #fba85a)" 
@@ -16,4 +25,5 @@
   <view class="footer">
     点击“注册”代表您同意《小猪商城用户协议》
   </view>
+  <van-toast id="van-toast" />
 </view>

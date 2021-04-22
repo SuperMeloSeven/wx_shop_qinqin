@@ -1,4 +1,5 @@
-// import Toast from '../../miniprogram_npm/@vant/weapp/dist/toast/toast';
+import Toast from '../../miniprogram_npm/@vant/weapp/toast/toast';
+
 Page({
   /**
    * 页面的初始数据
@@ -6,6 +7,10 @@ Page({
   data: {
     phone: '',
     password: '', 
+    sms: '',
+    btnText: '发送验证码',
+    sec: '',
+    compareCode: '1234',
     phoneFlag: false,
     passwordFlag: false,
     btn: '1'
@@ -93,20 +98,59 @@ Page({
       })
     }
   },
+  saveSms (event) {
+    this.setData({
+      sms: event.detail
+    })
+  },
+  sendSmsCode () {
+    let countDown = 60
+    console.log(Boolean(this.data.sec));
+    const timer = setInterval(() => {
+      countDown--
+      this.setData({
+        sec: countDown
+      })
+      if (countDown === 0) {
+        clearInterval(timer)
+        this.setData({
+          sec: ''
+        })
+      }
+    }, 1000)  
+  },
   // 保存账号密码并跳转
   handleRegister () {
     if (this.data.phoneFlag && this.data.passwordFlag) {
-      wx.setStorage({
-        data: this.data.phone,
-        key: 'phone',
-      })
-      wx.setStorage({
-        data: this.data.password,
-        key: 'password',
-      })
-      wx.navigateTo({
-        url: '/pages/login/login',
-      })
+      if (this.data.compareCode === this.data.sms) {
+        Toast({
+          type: 'success',
+          message: '注册成功',
+          onClose: () => {
+            wx.setStorage({
+              data: this.data.phone,
+              key: 'phone',
+            })
+            wx.setStorage({
+              data: this.data.password,
+              key: 'password',
+            })
+            wx.navigateTo({
+              url: '/pages/login/login',
+            }) 
+          }
+        })     
+      } else {
+        Toast({
+          type: 'fail',
+          message: '您输入的验证码有误，请重新输入',
+          onClose: () => {
+            this.setData({
+              sms: ''
+            })
+          }
+        })
+      }
     }
   }
 })

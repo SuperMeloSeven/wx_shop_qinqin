@@ -130,6 +130,11 @@
           "pathName": "pages/buySuccess/buySuccess",
           "query": "dtitle: \"【阿里大药房】仁和医用3层口罩10个\" id: \"32048302\" jiage: \"5.9\" pic: \"https://img.alicdn.com/imgextra/i4/2928278102/O1CN01AQ3qsO29ilZGHn5WT_!!0-item_pic.jpg\" platform: \"https://img.alicdn.com/imgextra/i1/2053469401/O1CN01o1MI292JJhz37UySP_!!2053469401.png\" shopName: \"健美创研旗舰店\"",
           "scene": null
+        },
+        {
+          "name": "注册",
+          "pathName": "pages/register/register",
+          "scene": null
         }
       ]
     }
