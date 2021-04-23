@@ -210,14 +210,44 @@ Page({
         "width": 48,
         "height": 26
       }]
-    }],
+    }]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    const {id,pic,jiage,dtitle,shopName} = options
+    wx.getStorage({
+      key: 'orderList',
+      success (res) {
+        let orderItem = {
+          id,
+          pic,
+          jiage,
+          dtitle,
+          shopName
+        }
+        res.data.push(orderItem)
+        wx.setStorage({
+          data: res.data,
+          key: 'orderList',
+        })
+      },
+      fail () {
+        let orderItem = [{
+          id,
+          pic,
+          jiage,
+          dtitle,
+          shopName
+        }]
+        wx.setStorage({
+          data: orderItem,
+          key: 'orderList',
+        })
+      }
+    })
   },
 
   /**
@@ -269,6 +299,11 @@ Page({
 
   },
 
+  goList () {
+    wx.navigateTo({
+      url: '/pages/orderList/orderList',
+    })
+  },
   goHome () {
     wx.switchTab({
       url: '/pages/home/home',

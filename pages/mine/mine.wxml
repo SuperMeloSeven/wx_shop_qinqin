@@ -16,9 +16,9 @@
           <image src="https://cmsstatic.ffquan.cn//wap_new/user/images/integral/love.png?v=202101280915"></image>
           <text>我的收藏</text>
         </view>
-        <view class="mine_fun" bindtap="goHome">
+        <view class="mine_fun" bindtap="goOrder">
           <image src="https://cmsstatic.ffquan.cn//wap_new/user/images/integral/foot.png?v=202101280915"></image>
-          <text>我的足迹</text>
+          <text>我的订单</text>
         </view>
       </view>
       <view class="user_tools">
@@ -44,4 +44,5 @@
       </view>
     </view>
   </view>
+  <van-toast id="van-toast" />
 </view>

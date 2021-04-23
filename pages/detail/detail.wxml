@@ -2,7 +2,7 @@
 
 <view class="detail">
   <swiper class="goods_swiper">
-    <swiper-item>
+    <swiper-item bindtap="handlePreview">
       <image class="goods_img" src="{{pic}}"></image>
     </swiper-item>
   </swiper>
@@ -124,4 +124,5 @@
       bind:close="shareClose"
     />
   </view>
+  <van-toast id="van-toast" />
 </view>

@@ -105,7 +105,6 @@ Page({
   },
   sendSmsCode () {
     let countDown = 60
-    console.log(Boolean(this.data.sec));
     const timer = setInterval(() => {
       countDown--
       this.setData({

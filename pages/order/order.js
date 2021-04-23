@@ -84,8 +84,8 @@ Page({
   },
 
   handleSubmit () {
-    wx.navigateTo({
-      url: '/pages/buySuccess/buySuccess',
+    wx.reLaunch({
+      url: `/pages/buySuccess/buySuccess?id=${this.data.id}&pic=${this.data.pic}&jiage=${this.data.jiage}&shopName=${this.data.shopName}&dtitle=${this.data.dtitle}`,
     })
   },
   handleService () {

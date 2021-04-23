@@ -1,10 +1,5 @@
 
 <view class="category">
-  <van-sticky>
-    <van-search shape="round" background="#bf0000" use-action-slot 
-                placeholder="输入商品名或粘贴宝贝标题搜索" sticky>
-    </van-search>
-  </van-sticky>
   <view class="cate_container">
     <van-sidebar active-key="{{ activeKey }}" bind:change="onChange">
       <van-sidebar-item title="{{item.name}}" wx:for="{{cateList}}" wx:key="cid" />

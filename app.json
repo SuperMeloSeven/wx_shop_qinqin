@@ -11,6 +11,7 @@
     "pages/sprog/sprog",
     "pages/custom/custom",
     "pages/order/order",
+    "pages/orderList/orderList",
     "pages/buySuccess/buySuccess",
     "pages/feedback/feedback",
     "pages/help/help",

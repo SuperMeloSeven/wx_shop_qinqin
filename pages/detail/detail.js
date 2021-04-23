@@ -351,69 +351,101 @@ Page({
   },
 
   collectClick(){
-    this.setData({
-      collectFlag: true
-    })
-
-    let _this = this
-    console.log(_this.data.platform);
-    wx.getStorage({
-      key: 'collectArr',
-      success (res) {
-        let addContent = {
-          id: _this.data.id,
-          platform: _this.data.platform,
-          dtitle: _this.data.dtitle,
-          jiage: _this.data.jiage,
-          quan: _this.data.quan,
-          xiaoliang: _this.data.xiaoliang,
-          shopName: _this.data.shopName,
-          pic: _this.data.pic
+    let stoPhone = wx.getStorageSync('phone')
+    if (stoPhone) {
+      this.setData({
+        collectFlag: true
+      })
+      let _this = this
+      wx.getStorage({
+        key: 'collectArr',
+        success (res) {
+          let addContent = {
+            id: _this.data.id,
+            platform: _this.data.platform,
+            dtitle: _this.data.dtitle,
+            jiage: _this.data.jiage,
+            quan: _this.data.quan,
+            xiaoliang: _this.data.xiaoliang,
+            shopName: _this.data.shopName,
+            pic: _this.data.pic
+          }
+          res.data.push(addContent)
+          wx.setStorage({
+            data: res.data,
+            key: 'collectArr',
+          })
+        },
+        fail () {
+          let addCollect = [{
+            id: _this.data.id,
+            platform: _this.data.platform,
+            dtitle: _this.data.dtitle,
+            jiage: _this.data.jiage,
+            quan: _this.data.quan,
+            xiaoliang: _this.data.xiaoliang,
+            shopName: _this.data.shopName,
+            pic: _this.data.pic
+          }]
+          wx.setStorage({
+            data: addCollect,
+            key: 'collectArr',
+          })
         }
-        res.data.push(addContent)
-        wx.setStorage({
-          data: res.data,
-          key: 'collectArr',
-        })
-      },
-      fail () {
-        let addCollect = [{
-          id: _this.data.id,
-          platform: _this.data.platform,
-          dtitle: _this.data.dtitle,
-          jiage: _this.data.jiage,
-          quan: _this.data.quan,
-          xiaoliang: _this.data.xiaoliang,
-          shopName: _this.data.shopName,
-          pic: _this.data.pic
-        }]
-        wx.setStorage({
-          data: addCollect,
-          key: 'collectArr',
-        })
-      }
-    })
+      })
+    } else {
+      Toast({
+        type: 'fail',
+        message: '请先登陆您的账号',
+        onClose: () => {
+          wx.switchTab({
+            url: '/pages/mine/mine',
+          })
+        }
+      })
+    }
   },
 
   collectCancel (e) {
-    console.log(e.target.dataset.id);
-    this.setData({
-      collectFlag: false
-    })
-    wx.getStorage({
-      key: 'collectArr',
-      success (res) {
-        wx.setStorage({
-          data: res.data.filter(v => e.target.dataset.id !== v.id),
-          key: 'collectArr',
-        })
-      }
-    })
+    let stoPhone = wx.getStorageSync('phone')
+    if (stoPhone) {
+      this.setData({
+        collectFlag: false
+      })
+      wx.getStorage({
+        key: 'collectArr',
+        success (res) {
+          wx.setStorage({
+            data: res.data.filter(v => e.target.dataset.id !== v.id),
+            key: 'collectArr',
+          })
+        }
+      })
+    } else {
+      Toast({
+        type: 'fail',
+        message: '请先登陆您的账号',
+        onClose: () => {
+          wx.switchTab({
+            url: '/pages/mine/mine',
+          })
+        }
+      })
+    }
   },
 
   goOrder () {
     wx.navigateTo({
       url: `/pages/order/order?id=${this.data.id}&shopName=${this.data.shopName}&pic=${this.data.pic}&jiage=${this.data.jiage}&platform=${this.data.platform}&dtitle=${this.data.dtitle}`,
+    })
+  },
+
+  handlePreview (e) {
+    const urls = [this.data.pic]
+    const current = e.currentTarget.dataset.url
+    wx.previewImage({
+      urls,
+      current
     })
   }
 })

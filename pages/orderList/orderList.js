@@ -1,13 +1,12 @@
-import Toast from '../../miniprogram_npm/@vant/weapp/toast/toast';
-
-// pages/mine/mine.js
+// pages/orderList/orderList.js
 Page({
+
   /**
    * 页面的初始数据
    */
   data: {
-    token: false,
-    phone: ''
+    orderList: [],
+    filterList: []
   },
 
   /**
@@ -28,18 +27,16 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    var stoPhone = wx.getStorageSync('phone')
-    if (stoPhone) {
-      this.setData({
-        token: true,
-        phone: stoPhone
-      })
-    } else {
-      this.setData({
-        token: false,
-        phone: ''
-      })
-    }
+    let _this = this
+    wx.getStorage({
+      key: 'orderList',
+      success (res) {
+        _this.setData({
+          orderList: res.data,
+          filterList: res.data
+        })
+      }
+    })
   },
 
   /**
@@ -77,23 +74,23 @@ Page({
 
   },
 
-  goCollect () {
-    wx.switchTab({
-      url: '/pages/collect/collect',
-    })
-  },
-  goOrder () {
+  onSearch (event) {
+    let _this = this
+    let addContent = []
     wx.getStorage({
-      key: 'phone',
-      success () {
-        wx.navigateTo({
-          url: '/pages/orderList/orderList',
-        })
-      },
-      fail () {
-        Toast({
-          type: 'fail',
-          message: '您还未登录账号'
+      key: 'orderList',
+      success (res) {
+        res.data.filter(v => {
+          if (v.dtitle.indexOf(event.detail) !== -1 && event.detail != '') {
+            addContent.push(v)
+            _this.setData({
+              filterList: addContent
+            })
+          } else if (event.detail == '') {
+            _this.setData({
+              filterList: _this.data.orderList
+            })
+          }
         })
       }
     })

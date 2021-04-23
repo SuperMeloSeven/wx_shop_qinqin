@@ -14,23 +14,26 @@
       <view>
         <view class="platform_title">客服qq号</view>
         <text class="platform_info">123456789</text>
-        <text class="platform_cooy">复制</text>
       </view>
     </view>
     <view class="flex_container wx">
       <image class="platform_img" src="https://cmsstaticnew.dataoke.com/wap_new/user/images/integral/serve-wx.png?v=2021-03-26"></image>
       <view>
         <view class="platform_title">微信</view>
-        <text class="platform_info">小猪商城</text>
-        <text class="platform_cooy">复制</text>
+        <view class="wx_contact_box">
+          <text class="platform_info">小猪商城</text>
+          <button class="platform_cooy" type="warn" open-type="contact" bindcontact="handleContact">沟通</button>
+        </view>
       </view>
     </view>
     <view class="flex_container code">
-      <image class="platform_img" src="https://cmsstaticnew.dataoke.com/wap_new/user/images/integral/serve-ewm.png?v=2021-03-26"></image>
+      <image class="platform_img" src="../../resources/iconfonts/phone.png"></image>
       <view>
-        <view class="platform_title">客服二维码</view>
-        <text class="platform_info">扫码加微信客服</text>
-        <text class="platform_cooy">查看二维码</text>
+        <view class="platform_title">客服热线</view>
+        <view class="wx_contact_box">
+          <text class="platform_info">拨打微信客服</text>
+          <button class="platform_cooy" type="warn" bindtap="handleCall">拨打</button>
+        </view>
       </view>
     </view>
   </view>

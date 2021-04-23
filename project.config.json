@@ -134,6 +134,25 @@
         {
           "name": "注册",
           "pathName": "pages/register/register",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "专属客服",
+          "pathName": "pages/custom/custom",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "订单详情",
+          "pathName": "pages/orderList/orderList",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "订单列表",
+          "pathName": "pages/orderList/orderList",
+          "query": "",
           "scene": null
         }
       ]

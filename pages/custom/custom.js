@@ -62,5 +62,19 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  handleCall () {
+    wx.makePhoneCall({
+      phoneNumber: '15888778616',
+      success: function () {
+        console.log('1111');
+      },
+      fail: function () {
+        console.log('2222');
+      }
+    })
+  },
+  handleContact (e) {
+    console.log(e);
   }
 })

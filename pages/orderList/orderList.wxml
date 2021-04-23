@@ -1,0 +1,37 @@
+<view class="order_list">
+  <van-search shape="round" background="#bf0000" placeholder="搜索订单" bind:change="onSearch"></van-search>
+  <view class="goods" wx:for="{{filterList}}" wx:key="*this">
+    <view class="goods_top">
+      <view class="shop_name">
+        <image src="https://img.alicdn.com/imgextra/i1/2053469401/O1CN01o1MI292JJhz37UySP_!!2053469401.png"></image>
+        <text wx:if="{{item.shopName == 'undefined'}}">小猪商城直营店</text>
+        <text wx:else>{{ item.shopName }}</text>
+      </view>
+      <text class="goods_status">商品打包中</text>
+    </view>
+    <view class="goods_info">
+      <image src="{{ item.pic }}"></image>
+      <view class="goods_info_center">
+        <view class="goods_name">{{ item.dtitle }}</view>
+        <view class="seven_day">七天无理由退换</view>
+      </view>
+      <view class="goods_info_right">
+        <view class="goods_price">￥{{ item.jiage }}</view>
+        <view class="goods_num">x1</view>
+      </view>
+    </view>
+    <view class="extra_content">
+      <view class="goods_options">
+        <view>
+          <text style="margin-right: 15px">运费险</text>
+          <text style="color: #666">退换货可自动理赔</text>
+        </view>
+        <text style="color: orangered">已出单</text>
+      </view>
+      <view class="total">
+        实付款：￥{{ item.jiage }}
+      </view>
+    </view>
+  </view>
+  <van-empty wx:if="{{ !filterList.length }}" description="暂无订单哦~" />
+</view>
